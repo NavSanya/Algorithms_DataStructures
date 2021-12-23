@@ -10,11 +10,5 @@ BUBBLESORT(A)
 4       exchange AŒj  with AŒj  1
 ```
 
-Output instructions:
-```
-Java:
-
-```
-
 ### Selection Sort
 Pseudocode :-
