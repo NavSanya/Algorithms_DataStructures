@@ -43,3 +43,15 @@ Python Program -> QuickSort.py
 ```
 
 </details>
+<details>
+<summary>2. Solving recurrences</summary>
+<br>
+  + Iteration Method
+  <br>
+  + Master Method
+  <br>
+  + Substitution Method
+  <br>
+  + Recursive Tree Method
+ </details>
+
