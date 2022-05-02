@@ -36,7 +36,7 @@ class BubbleSort
             System.out.print(arr[i]+"\t");
         }
         System.out.println();
-    }
+    }//printArray()
 
     protected int[] bubbleSort(int[] arr)
     {
@@ -50,7 +50,7 @@ class BubbleSort
         }//for i loop (outer)
         return arr;
     }//bubbleSort()
-}
+}//Class Bubblesort
 
 class Main
 {
@@ -69,6 +69,6 @@ class Main
         arrAns = bs.bubbleSort(arr);
         bs.printArray(arrAns);
 
-    }
-}
+    }//main()
+}//Class Main
 

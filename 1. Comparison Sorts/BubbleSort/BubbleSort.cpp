@@ -13,14 +13,14 @@ vector<int> initializeArrayWithRandomNumbers(int n)
     }
 
     return vec;
-}
+}//initializeArrayWithRandomNumbers
 
 void swap(int& val1, int& val2)
 {
     int temp = val1;
     val1 = val2;
     val2 = temp;
-}
+}//swap
 
 void printVector(vector<int>vec)
 {
@@ -30,7 +30,7 @@ void printVector(vector<int>vec)
     }
 
     cout<<endl;
-}
+}//printVector
 
 vector<int> bubbleSort(vector<int>vec)
 {
@@ -43,7 +43,7 @@ vector<int> bubbleSort(vector<int>vec)
         }
     }
     return vec;
-}
+}//bubbleSort
 
 int main()
 {
@@ -57,4 +57,4 @@ int main()
     printVector(ans);
     
     return 0;
-}
+}//main
