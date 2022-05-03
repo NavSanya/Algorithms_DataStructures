@@ -3,7 +3,9 @@
 <summary>1. Comparison Sorts - Ascending order</summary>
 <br>
   
-Bubble Sort
+[Bubble Sort][1]
+  
+[1]: https://github.com/NavSanya/Algorithms/tree/main/1.%20Comparison%20Sorts/BubbleSort
 Three files:-
 ```
 C++ Program -> BubbleSort.cpp
@@ -12,6 +14,8 @@ Python Program -> BubbleSort.py
 ```
 
 Selection Sort
+
+  
 Three files:-
 ```
 C++ Program -> SelectionSort.cpp
@@ -54,4 +58,51 @@ Python Program -> QuickSort.py
   <br>
   + Recursive Tree Method
  </details>
+ 
+ <details>
+<summary>3. Heaps</summary>
+<br>
+  + MaxHeaps in C++
+  <br>
+  + MaxHeaps in Java
+  <br>
+  + MaxHeaps in Python
+ </details>
 
+<details>
+<summary>4. Non Comparison Sort</summary>
+<br>
+  + Counting Sort
+    
+    * C++
+    * Java
+    * Python
+  <br>
+  + Radix Sort
+    
+    * C++
+    * Java
+    * Python
+ </details>
+
+<details>
+<summary>5. Linked List</summary>
+<br>
+  + Single Linked List
+    
+    * C++
+    * Java
+    * Python
+  <br>
+  + Double Linked List
+    
+    * C++
+    * Java
+    * Python
+  <br>
+  + Circular Linked List
+    
+    * C++
+    * Java
+    * Python
+ </details>
