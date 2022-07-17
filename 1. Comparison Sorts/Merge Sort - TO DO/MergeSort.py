@@ -2,7 +2,7 @@ import random
  
 """
  creating an array of size n
- initializing the arry with random values
+ initializing the array with random values
 """
 def initializeArrayWithRandomNumbers(n):
     myList = []
@@ -30,14 +30,14 @@ def merge(myList, low, high, mid):
 			k += 1
 	
 	while i < len(leftArray):
-		myList[k] = leftArray[i];
-        ++i;
-        ++k;
+		myList[k] = leftArray[i]
+        ++i
+        ++k
 
 	while j < len(rightArray):
-		myList[k] = rightArray[j];
-        ++j;
-        ++k;
+		myList[k] = rightArray[j]
+        ++j
+        ++k
 	return myList
 	
 	
@@ -45,8 +45,8 @@ def mergeSort(myList, high, low):
 	if low < high:
 		mid = (high + low)//2
 		myList= mergeSort(myList, high, (mid+1))
-        myList = mergeSort(myList, mid, low )
-        myList = merge(myList, low, high, mid)
+    	myList = mergeSort(myList, mid, low)
+    	myList = merge(myList, low, high, mid)
 	return myList
 
 size = 10

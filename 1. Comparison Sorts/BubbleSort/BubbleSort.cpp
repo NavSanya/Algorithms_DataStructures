@@ -3,6 +3,10 @@
 #include <time.h>
 using namespace std;
 
+/*
+		creating an array of size n
+		initializing the array with random values
+	*/
 vector<int> initializeArrayWithRandomNumbers(int n)
 {
     srand (time(NULL));
