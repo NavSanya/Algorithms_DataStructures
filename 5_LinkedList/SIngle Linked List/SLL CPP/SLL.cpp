@@ -76,7 +76,6 @@ int SLL::deleteFirstInstance(int target)
 {
 	Node* temp = head;
 	Node* prev;
-	Node* toDelete;
 	int retVal;
 	if(head == nullptr)
 	{
@@ -88,7 +87,6 @@ int SLL::deleteFirstInstance(int target)
 		if(temp->val == target)
 		{
 			retVal = temp->val;
-			toDelete = temp;
 			if(temp == head)
 			{
 				head = head->next;
@@ -100,7 +98,7 @@ int SLL::deleteFirstInstance(int target)
 		prev = temp;
 		temp = temp->next;
 	}
-	return retVal;;
+	return retVal;
 }
 
 void SLL::deleteAllInstances(int target)
@@ -140,7 +138,6 @@ void SLL::deleteFront()
 		return;
 	}
 
-	Node* toDelete = head;
 	head = head->next;
 }
 

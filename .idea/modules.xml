@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/5. Linked List/5. Linked List.iml" filepath="$PROJECT_DIR$/5. Linked List/5. Linked List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Algorithms.iml" filepath="$PROJECT_DIR$/.idea/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ComparisonSorts/ComparisonSorts.iml" filepath="$PROJECT_DIR$/ComparisonSorts/ComparisonSorts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/HashTables.iml" filepath="$PROJECT_DIR$/HashTables/HashTables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heaps/Heaps.iml" filepath="$PROJECT_DIR$/Heaps/Heaps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Non-ComparisonSorts/Non-ComparisonSorts.iml" filepath="$PROJECT_DIR$/Non-ComparisonSorts/Non-ComparisonSorts.iml" />
+    </modules>
+  </component>
+</project>

@@ -5,7 +5,7 @@ myList = []
 def initializeList(n):
 	myList.append(int(inf))
 	for i in range(n-1):
-        myList.append(random.randint(0,n))
+		myList.append(random.randint(0,n))
 
 def LeftChild(i):
 	return 2*i
@@ -21,13 +21,13 @@ def MaxHeapify(i, n):
 	r = RightChild(i)
 	if l<n and myList[l]>myList[i]:
 		largest = l
-	else 
+	else:
 		largest = i
 	if r<n and myList[r]>myList[largest]:
 		largest = r
 	
-	if largest /= i:
-		myList[i], myList[largest] = myList[largest], myList[i]
-		MaxHeapify(largest, n)
+	# if largest/=i:
+	# 	myList[i], myList[largest] = myList[largest], myList[i]
+	# 	MaxHeapify(largest, n)
 
-def BuildMaxHeap(n):
+# def BuildMaxHeap(n):
