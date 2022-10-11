@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Algorithms_DataStructures_d959efc4"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

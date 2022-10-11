@@ -28,23 +28,25 @@ public class BinarySearch {
 
     protected int binarySearch(int[] arr, int target, int low, int high) {
         if(low>high)
+            
             return -1;
-        
         int mid = (low + high) / 2;
-        if(target == arr.at(mid))
+        if(target == arr[mid])
         {
             return mid;
         }
 
-        if(target < arr.at(mid))
+        if(target < arr[mid])
         {
-            binarySearch(arr, target, low, mid);
+            return binarySearch(arr, target, low, mid);
         }
 
-        if(target > arr.at(mid))
+        if(target > arr[mid])
         {
-            binarySearch(arr, target, mid+1, high);
+            return binarySearch(arr, target, mid+1, high);
         } 
+
+        return -999;
     }// binarySearch()
 }// Class BinarySearch
 

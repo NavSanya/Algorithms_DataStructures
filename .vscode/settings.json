@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "0.5_Search/LinearSearch"
+        "0.5_Search/LinearSearch",
+        "0.5_Search/BinarySearch"
     ],
     "C_Cpp.errorSquiggles": "Disabled"
 }
