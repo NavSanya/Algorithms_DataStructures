@@ -46,7 +46,7 @@ class BubbleSort {
     }// bubbleSort()
 }// Class Bubblesort
 
-class Main {
+class MainBubble {
 
     public static void main(String args[]) throws IOException {
         BubbleSort bs = new BubbleSort();

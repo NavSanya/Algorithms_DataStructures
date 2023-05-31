@@ -27,30 +27,27 @@ public class BinarySearch {
     }// printArray()
 
     protected int binarySearch(int[] arr, int target, int low, int high) {
-        if(low>high)
-            
+        if (low > high)
+
             return -1;
         int mid = (low + high) / 2;
-        if(target == arr[mid])
-        {
+        if (target == arr[mid]) {
             return mid;
         }
 
-        if(target < arr[mid])
-        {
+        if (target < arr[mid]) {
             return binarySearch(arr, target, low, mid);
         }
 
-        if(target > arr[mid])
-        {
-            return binarySearch(arr, target, mid+1, high);
-        } 
+        if (target > arr[mid]) {
+            return binarySearch(arr, target, mid + 1, high);
+        }
 
         return -999;
     }// binarySearch()
 }// Class BinarySearch
 
-class Main {
+class Demo {
 
     public static void main(String args[]) throws IOException {
         BinarySearch bs = new BinarySearch();

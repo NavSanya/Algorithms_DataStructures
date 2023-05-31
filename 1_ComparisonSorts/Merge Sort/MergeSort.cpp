@@ -40,10 +40,8 @@ vector<int> merge(vector<int>&vec, int low, int high, int mid)
     lengthLeft = mid - low + 1;
     lengthRight = high - mid;
 	
-	vector<int>leftArray;
-	leftArray.resize(lengthLeft);
-	vector<int>rightArray;
-	rightArray.resize(lengthRight);
+	vector<int>leftArray(lengthLeft);
+	vector<int>rightArray(lengthRight);
 	for(i=0; i<lengthLeft; ++i)
 	{
 		leftArray.at(i) = vec.at(low+i);
@@ -63,14 +61,13 @@ vector<int> merge(vector<int>&vec, int low, int high, int mid)
 		{
 			vec.at(k) = leftArray.at(i);
 			i++;
-			k++;
 		}//if block
 		else
 		{
 			vec.at(k)=rightArray.at(j);
 			j++;
-			k++;
 		}//else block
+		++k;
 	}//while loop
 
 	while (i<lengthLeft) //for the remaining elements in the left array
@@ -82,7 +79,7 @@ vector<int> merge(vector<int>&vec, int low, int high, int mid)
 
 	while (j<lengthRight)//for the remaining elements in the right array
 	{
-		vec.at(k) = rightArray.at(i);
+		vec.at(k) = rightArray.at(j);
 		++j;
 		++k;
 	}//while j loop
@@ -96,7 +93,7 @@ vector<int> mergeSort(vector<int>&vec, int high, int low)
         if(low < high)
         {
             mid = (high + low) / 2;
-            vec = mergeSort(vec, high, (mid+1));//redivide the right half
+            vec = mergeSort(vec, high, (mid + 1));//redivide the right half
             vec = mergeSort(vec, mid, low);//redivide the left half
             vec = merge(vec, low, high, mid);//merge the sorted halves
         }//if block
@@ -110,7 +107,7 @@ int main()
     vector<int>vec = initializeArrayWithRandomNumbers(size);
     printVector(vec);
 
-    cout<<"**********Merge Sort**********\n";
+    cout<<"n**********Merge Sort**********\n";
     vector<int>ans = mergeSort(vec, size-1, 0);
     printVector(ans);
     

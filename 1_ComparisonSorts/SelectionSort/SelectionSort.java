@@ -1,69 +1,60 @@
 import java.io.*;
 import java.util.*;
 
-class SelectionSort
-{
+class SelectionSort {
     /*
-		creating an array of size n
-		initializing the arry with random values
-	*/
-    public int[] initializeArrayWithRandomNumbers(int n)
-    {
+     * creating an array of size n
+     * initializing the arry with random values
+     */
+    public int[] initializeArrayWithRandomNumbers(int n) {
         int arr[] = new int[n];
         int i;
         Random rand = new Random();
-        for(i = 0; i <n; ++i)
-        {
+        for (i = 0; i < n; ++i) {
             arr[i] = rand.nextInt(n);
         }
         return arr;
     }
 
-    //Swaps the values at position1 and position2 in the array parameter and returns the edited array
-    public int[] swap (int[] arr, int position1, int position2)
-    {
+    // Swaps the values at position1 and position2 in the array parameter and
+    // returns the edited array
+    public int[] swap(int[] arr, int position1, int position2) {
         int temporary = arr[position1];
         arr[position1] = arr[position2];
         arr[position2] = temporary;
         return arr;
-    }//swap()
+    }// swap()
 
-    public void printArray(int arr[])
-    {
+    public void printArray(int arr[]) {
         int i;
-        for(i=0;i<arr.length;++i)
-        {
-            System.out.print(arr[i]+"\t");
+        for (i = 0; i < arr.length; ++i) {
+            System.out.print(arr[i] + "\t");
         }
         System.out.println();
-    } 
-    
-    protected int[] selectionSort(int[] arr)
-    {
-        int smallest,i,j, SmallestPosition;
+    }
+
+    protected int[] selectionSort(int[] arr) {
+        int smallest, i, j, SmallestPosition;
         // One by one move boundary of unsorted subarray
-        for(i=0; i<((arr.length)-1); ++i)
-        {
+        for (i = 0; i < ((arr.length) - 1); ++i) {
             smallest = arr[i];
             SmallestPosition = i;
             // Find the minimum element in unsorted array
-            for (j=i+1; j < arr.length; ++j)
-            {
-                if (arr[j] < smallest)
-                {
+            for (j = i + 1; j < arr.length; ++j) {
+                if (arr[j] < smallest) {
                     smallest = arr[j];
                     SmallestPosition = j;
-                }//if block
-            }//for j loop (inner)
-            // Swap the found minimum element with the first element
-            arr = swap (arr, i, SmallestPosition);
-        }//for i loop (outer)
+                } // if block
+            } // for j loop (inner)
+              // Swap the found minimum element with the first element
+            arr = swap(arr, i, SmallestPosition);
+        } // for i loop (outer)
         return arr;
-    }//selectionSort()
+    }// selectionSort()
 }
-class Main
-{
-	public static void main(String[] args) {
+
+class MainSelection {
+    public static void main(String[] args) {
         SelectionSort ss = new SelectionSort();
         int size = 10;
         int arrAns[];
@@ -71,9 +62,9 @@ class Main
         System.out.println("Unsorted Array");
         ss.printArray(arr);
 
-        //Bubble Sort
+        // Bubble Sort
         System.out.println("**********Selection Sort**********");
         arrAns = ss.selectionSort(arr);
-        ss.printArray(arrAns);	
-	}
+        ss.printArray(arrAns);
+    }
 }
