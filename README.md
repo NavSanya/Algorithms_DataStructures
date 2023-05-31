@@ -13,8 +13,9 @@ Java Program -> BubbleSort.java
 Python Program -> BubbleSort.py
 ```
 
-Selection Sort
-
+[Selection Sort][2]
+  
+[2]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/SelectionSort
   
 Three files:-
 ```
@@ -23,7 +24,10 @@ Java Program -> SelectionSort.java
 Python Program -> SelectionSort.py
 ```
 
-Insertion Sort
+[Insertion Sort][3]
+  
+[3]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/InsertionSort
+  
 Three files:-
 ```
 C++ Program -> InsertionSort.cpp
@@ -72,37 +76,42 @@ Python Program -> QuickSort.py
 <details>
 <summary>4. Non Comparison Sort</summary>
 <br>
-  + Counting Sort
-    
+  Counting Sort
+  ```
     * C++
     * Java
     * Python
+  ```
   <br>
-  + Radix Sort
-    
+  Radix Sort
+  ```  
     * C++
     * Java
     * Python
+  ```
  </details>
 
 <details>
 <summary>5. Linked List</summary>
 <br>
-  + Single Linked List
-    
+  Single Linked List
+  ```  
     * C++
     * Java
     * Python
+  ```
   <br>
-  + Double Linked List
-    
+  Double Linked List
+  ```  
     * C++
     * Java
     * Python
+  ```
   <br>
-  + Circular Linked List
-    
+  Circular Linked List
+  ```
     * C++
     * Java
     * Python
+  ```
  </details>
