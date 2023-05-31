@@ -14,9 +14,14 @@ def merge(myList, low, high, mid):
 	lengthLeft = mid - low + 1
 	lengthRight = high - mid
 	
-	leftArray = myList[:mid]
-	rightArray = myList[mid:]
-	
+	leftArray = [None]*lengthLeft
+	rightArray = [None]*lengthRight
+ 
+	for i in range(lengthLeft):
+		leftArray[i] = myList[low + i]
+	for i in range(lengthRight):
+		rightArray[i] = myList[mid + 1 + i]
+ 	
 	i = j = 0
 	k = low
 	while i < len(leftArray) and j < len(rightArray):
@@ -31,13 +36,13 @@ def merge(myList, low, high, mid):
 	
 	while i < len(leftArray):
 		myList[k] = leftArray[i]
-        ++i
-        ++k
+		i += 1
+		k += 1
 
 	while j < len(rightArray):
 		myList[k] = rightArray[j]
-        ++j
-        ++k
+		j += 1
+		k += 1
 	return myList
 	
 	
@@ -45,8 +50,8 @@ def mergeSort(myList, high, low):
 	if low < high:
 		mid = (high + low)//2
 		myList= mergeSort(myList, high, (mid+1))
-    	myList = mergeSort(myList, mid, low)
-    	myList = merge(myList, low, high, mid)
+		myList = mergeSort(myList, mid, low)
+		myList = merge(myList, low, high, mid)
 	return myList
 
 size = 10

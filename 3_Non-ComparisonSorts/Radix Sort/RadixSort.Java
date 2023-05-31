@@ -1,23 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main
-{
-    public static void main(String[] args) {
-        RadixSort rs = new RadixSort();
-        int size = 10;
-        int arrAns[];
-        int arr[] =rs.initializeArrayWithRandomNumbers(size);
-        System.out.println("Unsorted Array");
-        rs.printArray(arr);
-
-        //Counting Sort
-        System.out.println("**********Radix Sort**********");
-        arrAns = rs.radixSort(arr);
-        rs.printArray(arrAns);
-    }
-}
-class RadixSort
+public class RadixSort
 {
     public int[] initializeArrayWithRandomNumbers(int n)
     {
@@ -85,4 +69,21 @@ class RadixSort
         return outarr;
     }
 
+}
+
+class MainRadix
+{
+    public static void main(String[] args) {
+        RadixSort rs = new RadixSort();
+        int size = 10;
+        int arrAns[];
+        int arr[] =rs.initializeArrayWithRandomNumbers(size);
+        System.out.println("Unsorted Array");
+        rs.printArray(arr);
+
+        //Counting Sort
+        System.out.println("**********Radix Sort**********");
+        arrAns = rs.radixSort(arr);
+        rs.printArray(arrAns);
+    }
 }

@@ -58,7 +58,7 @@ int main()
     vector<int>vec = initializeArrayWithRandomNumbers(size);
     printVector(vec);
 
-    cout<<"**********BInary Search**********\n";
+    cout<<"**********Binary Search**********\n";
     srand (time(NULL));
     int tar = (rand()%size+1);
     cout<<"Value to be searched: "<<tar<<endl;

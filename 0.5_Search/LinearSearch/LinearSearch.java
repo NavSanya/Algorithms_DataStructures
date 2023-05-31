@@ -27,16 +27,15 @@ public class LinearSearch {
     }// printArray()
 
     protected int linearSearch(int[] arr, int target) {
-        for(int i = 0; i<arr.length; ++i)
-    {
-        if(target == arr[i])
-            return i;
-    }
-    return -1;
+        for (int i = 0; i < arr.length; ++i) {
+            if (target == arr[i])
+                return i;
+        }
+        return -1;
     }// linearSearch()
 }// Class LinearSearch
 
-class Main {
+class MainLinear {
 
     public static void main(String args[]) throws IOException {
         LinearSearch bs = new LinearSearch();

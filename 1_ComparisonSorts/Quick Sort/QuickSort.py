@@ -12,53 +12,48 @@ def initializeArrayWithRandomNumbers(n):
 	
 def partitionMiddle(myList, left, right):
 	x = myList[left]
-	y = myList[int((left+right)/2)]
+	y = myList[(left + right)//2]
 	z = myList[right]
+	
+	#select pivot point
 	if x < y:
 		if y < z:
 			pivot = y
 		elif x < z:
 			pivot = z
 		else:
-		    pivot = x
+			pivot = x
 	else:
-		if x>z:
+		if y > z:
 			pivot = y
 		elif x > z:
 			pivot = z
 		else:
 			pivot = x
-			
 	i = left - 1
 	j = right + 1
-	
-	while True:
-		while True:
-		    i+=1
-		    if myList[i]>=pivot:
-			    break
-		    if i==right:
-		        break
-		    
-		while True:
-		    j-=1
-		    if myList[j]<=pivot:
-		        break
-		    if j==left:
-			    break
-		
+	while i < j:
+		j -= 1
+		i += 1
+		while myList[i] < pivot: #inner while i
+			if i == right:
+				break
+			i += 1
+
+		while myList[j] > pivot: #inner while j
+			if j == left:
+				break
+			j -= 1
 		if i >= j:
-		    break
-		
+			break
 		myList[i], myList[j] = myList[j], myList[i]
-		
-	return j
-	
+	return j	
+ 
 def quickSort(myList, left, right):
 	if left < right:
 		mid = partitionMiddle(myList, left, right)
 		myList = quickSort(myList, left, mid)
-		myList = quickSort(myList, mid+1, right)
+		myList = quickSort(myList, (mid+1), right)
 	return myList
 
 size = 10
@@ -67,5 +62,5 @@ myList = initializeArrayWithRandomNumbers(size)
 print(myList)
 
 print("**********Quick Sort**********")
-myList = quickSort(myList, 0, size-1)
+myList = quickSort(myList, 0, (size-1))
 print(myList)

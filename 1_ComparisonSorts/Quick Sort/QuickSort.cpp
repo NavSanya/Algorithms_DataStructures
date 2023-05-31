@@ -37,13 +37,13 @@ int partitionMiddle(vector<int>&vec, int left, int right)
 	int x = vec.at(left);
 	int y = vec.at((left+right)/2);
 	int z = vec.at(right);
-	int pivot = (x < y ? (y < z ? y : x < z ? z : x) : (x > z ? y : x > z ? z : x));
+	int pivot = (x < y ? (y < z ? y : x < z ? z : x) : (y > z ? y : x > z ? z : x));
 
 
 	int i = left-1;
 	int j = right+1;
 	
-	while(true)
+	while(i < j)
 	{
 		while(vec.at(++i) < pivot)
 		{
