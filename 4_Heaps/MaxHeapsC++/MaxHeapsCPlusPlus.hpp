@@ -20,7 +20,7 @@ void initializeList(int n)
 
 void printList()
 {
-    for(int i = 1; i<maxHeapList.size(); ++i)
+    for(int i = 1; i < maxHeapList.size(); ++i)
     {
         cout<<maxHeapList.at(i)<<"\t";
     }
@@ -36,26 +36,30 @@ void swap(int&a, int&b)
 
 int LeftChild(int i)
 {
-    return 2*i;
+    return 2 * i;
 }
 
 int RightChild(int i)
 {
-    return(2*i)+1;
+    return(2 * i) + 1;
 }
 
 int Parent(int i)
 {
-    return i/2;
+    return i / 2;
 }
-
+/*
+* Maintaining Max Heap Property:-
+* Left and Right Subtree is a max heap
+* A[i] may be smaller than its children 
+*/
 void MaxHeapify(int i, int n)
 {
     int l = LeftChild(i);
     int r = RightChild(i);
     int largest;
 
-    if (l<n && maxHeapList.at(l)>maxHeapList.at(i))
+    	if (l < n && maxHeapList.at(l) > maxHeapList.at(i))
 	{
 		largest = l;
 	}
@@ -63,7 +67,7 @@ void MaxHeapify(int i, int n)
 	{
 		largest = i;
 	}
-	if (r<n && maxHeapList.at(r)>maxHeapList.at(largest))
+	if (r < n && maxHeapList.at(r) > maxHeapList.at(largest))
 	{
 		largest = r;
 	}
@@ -75,41 +79,54 @@ void MaxHeapify(int i, int n)
 	
 }
 
+/*
+* Convert an array into max heap
+*/
 void BuildMaxHeap()
 {
 	int n = maxHeapList.size();
-	for(int i = n/2; i>=1; --i)
+	for(int i = n / 2; i >= 1; --i)
 	{
-		MaxHeapify((i), n);
+		MaxHeapify(i, n);
 	}
 }
 
+/*
+* Sort an array using heap properties
+*/
 void HeapSort()
 {
 	int n = maxHeapList.size();
 	BuildMaxHeap();
-	for(int i = n-1; i>=2; --i)
+	for(int i = n - 1; i >= 2; --i)
 	{
 		swap(maxHeapList.at(1), maxHeapList.at(i));
 		MaxHeapify(1, i-1);
 	}
 }
 
+/*
+* Extract the max value 
+* Return and delete it from the original list
+*/
 int extractMax()
 {
 	int n = maxHeapList.size();
-	if(n<1)
+	if(n < 1)
 	{
 		cout<<"Underflow"<<endl;
 		return -999;
 	}
-  BuildMaxHeap();
+  	BuildMaxHeap();
 	int max = maxHeapList.at(1);
 	maxHeapList.at(1) = maxHeapList.at(n-1);
 	MaxHeapify(1, n-1);
 	return max;
 }
 
+/*
+*increase the key of the elemnt on index i
+*/
 void increaseKey(int i, int key)
 {
 	if(key<maxHeapList.at(i))
@@ -117,13 +134,16 @@ void increaseKey(int i, int key)
 		cout<<"New key smaller than current key"<<endl;
 	}
 	maxHeapList.at(i) = key;
-	while(i>1 && maxHeapList.at(Parent(i))<maxHeapList.at(i))
+	while(i > 1 && maxHeapList.at(Parent(i)) < maxHeapList.at(i))
 	{
 		swap(maxHeapList.at(i), maxHeapList.at(Parent(i)));
 		i = Parent(i);
 	}
 }
 
+/*
+*insert new element to the heap
+*/
 void insertVal(int key)
 {
 	int n = maxHeapList.size();
