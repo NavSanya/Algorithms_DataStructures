@@ -1,99 +1,83 @@
 import java.io.*;
 import java.util.*;
 
-public class SLL
-{
+public class SLL {
     private Node head;
 
-    public SLL()
-    {
+    public SLL() {
         head = null;
     }
 
-    public SLL(Node h)
-    {
+    public SLL(Node h) {
         head = h;
     }
 
-    public void printList()
-    {
-        if(head == null)
-        {
+    public void printList() {
+        if (head == null) {
             System.out.println("No List");
             return;
         }
 
         Node temp = head;
-        while(temp.next != null)
-        {
+        while (temp.next != null) {
             System.out.print(temp.val + "--->");
             temp = temp.next;
         }
         System.out.println(temp.val);
     }
 
-    public void addEnd(int newVal)
-    {
+    public void swap(Node a, Node b) {
+        int temp = a.val;
+        a.val = b.val;
+        b.val = temp;
+    }
+
+    public void addEnd(int newVal) {
         Node nn = new Node(newVal, null);
-	
-        //if there is no list
-        if(head == null)
-        {
+
+        // if there is no list
+        if (head == null) {
             head = nn;
             return;
         }
-            
-        //SLL traversal - add at the end of the list
+
+        // SLL traversal - add at the end of the list
         Node temp = head;
-        while(temp.next!= null)
-        {
+        while (temp.next != null) {
             temp = temp.next;
         }
 
         temp.next = nn;
     }
 
-    public void addAfter(int newVal, int prevVal)
-    {
+    public void addAfter(int newVal, int prevVal) {
         Node nn = new Node(newVal, null);
-	
-        if(head == null)
+
+        if (head == null)
             return;
-        
+
         Node temp = head;
-        while(temp.next != null && temp.val != prevVal)
-        {
+        while (temp.next != null && temp.val != prevVal) {
             temp = temp.next;
         }
-        
-        if(temp == null)
-        {
-            System.out.println("Not Present");
-            return;
-        }
-        
+
         Node newNext = temp.next;
         temp.next = nn;
         nn.next = newNext;
     }
-	
-	public void deleteFirstInstance(int target)
-    {
+
+    public void deleteFirstInstance(int target) {
         Node temp = head;
         Node prev = null;
         int retVal;
-        if(head == null)
-        {
+        if (head == null) {
             return;
         }
-    
-        while(temp != null)
-        {
-            if(temp.val == target)
-            {
+
+        while (temp != null) {
+            if (temp.val == target) {
                 retVal = temp.val;
-                if(temp == head)
-                {
+                if (temp == head) {
                     head = head.next;
                     break;
                 }
@@ -105,62 +89,109 @@ public class SLL
         }
     }
 
-    public void deleteAllInstances(int target)
-    {
+    public void deleteAllInstances(int target) {
         Node temp = head;
         Node prev = null;
 
-        if(head == null)
-        {
+        if (head == null) {
             return;
         }
 
-        while(temp != null)
-        {
-            if(temp.val == target)
-            {
-                if(temp == head)
-                {
+        while (temp != null) {
+            if (temp.val == target) {
+                if (temp == head) {
                     head = head.next;
-                }
-                else
-                {
-                prev.next = temp.next;
+                } else {
+                    prev.next = temp.next;
                 }
             }
             prev = temp;
             temp = temp.next;
-	    }
+        }
     }
 
-    public void deleteFront()
-    {
-        if(head == null)
-        {
+    public void deleteFront() {
+        if (head == null) {
             return;
         }
 
         head = head.next;
     }
 
-    public void deleteEnd()
-    {
-        if(head == null)
-        {
+    public void deleteEnd() {
+        if (head == null) {
             return;
         }
 
         Node temp = head;
         Node prev = null;
-        while(temp.next!=null)
-        {
+        while (temp.next != null) {
             prev = temp;
             temp = temp.next;
         }
         prev.next = null;
     }
+
+    public void sortSLL() {
+        if (head == null) {
+            return;
+        }
+
+        Node i = head;
+        Node j;
+        while (i != null) {
+            j = i.next;
+            while (j != null) {
+                if (i.val > j.val) {
+                    swap(i, j);
+                }
+                j = j.next;
+            }
+            i = i.next;
+        }
+    }
 }
 
+class MainSLL {
+    public static void main(String args[]) throws IOException {
+        System.out.println("The Single Linked List");
+        SLL obj = new SLL();
+        obj.addEnd(7);
+        obj.addEnd(9);
+        obj.addEnd(10);
+        obj.addEnd(1);
+        obj.addEnd(0);
+        obj.addEnd(9);
+        obj.addEnd(2);
+        obj.addEnd(4);
+        obj.printList();
 
+        System.out.println("Add 10 after 7");
+        obj.addAfter(10, 7);
+        obj.printList();
 
+        System.out.println("Add 3 after 9");
+        obj.addAfter(3, 9);
+        obj.printList();
 
+        System.out.println("Sorted List");
+        obj.sortSLL();
+        obj.printList();
+
+        System.out.println("Delete front");
+        obj.deleteFront();
+        obj.printList();
+
+        System.out.println("Delete end");
+        obj.deleteEnd();
+        obj.printList();
+
+        System.out.println("Delete the first instance of 9");
+        obj.deleteFirstInstance(9);
+        obj.printList();
+
+        System.out.println("Delete all instances of 10");
+        obj.deleteAllInstances(10);
+        obj.printList();
+    }
+}

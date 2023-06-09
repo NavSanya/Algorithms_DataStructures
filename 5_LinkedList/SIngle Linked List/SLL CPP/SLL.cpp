@@ -12,13 +12,13 @@ SLL::SLL(Node* h)
 
 void SLL::printList()
 {
-	if(head==nullptr)
+	if(head == nullptr)
 	{
 		cout<<"No List\n";
 		return;
 	}
 	Node* temp  = head;
-	while(temp->next!= nullptr)
+	while(temp->next != nullptr)
 	{
 		cout<<temp->val<<"--->";
 		temp = temp->next;
@@ -40,7 +40,7 @@ void SLL::addEnd(int newVal)
 		
 	//SLL traversal - add at the end of the list
 	Node* temp = head;
-	while(temp->next!= nullptr)
+	while(temp->next != nullptr)
 	{
 		temp = temp->next;
 	}
@@ -150,7 +150,7 @@ void SLL::deleteEnd()
 
 	Node* temp = head;
 	Node* prev;
-	while(temp->next!=nullptr)
+	while(temp->next != nullptr)
 	{
 		prev = temp;
 		temp = temp->next;
@@ -172,13 +172,12 @@ void SLL:: sortSLL()
 		return;
 	}
 
-	Node* end;
 	Node* i = head;
 	Node* j;
-	while(i!=nullptr)
+	while(i != nullptr)
 	{
 		j = i->next;
-		while (j!=nullptr)
+		while (j != nullptr)
 		{
 			if(i->val > j->val)
 			{
@@ -194,7 +193,7 @@ void SLL:: sortSLL()
 int main()
 {
 	cout<<"The Single Liked List\n";
-    SLL obj;
+    	SLL obj;
 	obj.addEnd(7);
 	obj.addEnd(9);
 	obj.addEnd(10);
@@ -213,6 +212,10 @@ int main()
 	obj.addAfter(3,9);
 	obj.printList();
 
+	cout<<"Sort List\n";
+	obj.sortSLL();
+	obj.printList();
+
 	cout<<"Delete front\n";
 	obj.deleteFront();
 	obj.printList();
@@ -229,6 +232,6 @@ int main()
 	obj.deleteAllInstances(10);
 	obj.printList();
     
-    return 0;
+    	return 0;
 }
 

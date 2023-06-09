@@ -1,19 +1,22 @@
 class Node:
-    def __init__(self, val = None):
-        self.val = val;
-        self.next = None
+    def __init__(self, val = None, nn = None):
+        self.val = val
+        self.next = nn
 
 class SLL:
     def __init__(self):
-        self.head = None;
+        self.head = None
         
     def printList(self):
         if self.head is None:
             print("No List")
         temp = self.head
-        while temp is not None:
-            print(temp.val)
+        x = ""
+        while temp.next is not None:
+            x = x + str(temp.val) + "--->"
             temp = temp.next
+        x = x + str(temp.val)
+        print(x)
         
     def addEnd(self, newVal):
         nn = Node(newVal)
@@ -21,7 +24,7 @@ class SLL:
             self.head = nn
             return
         temp = self.head
-        if temp.next is not None:
+        while temp.next is not None:
             temp = temp.next
         temp.next = nn
         
@@ -32,9 +35,7 @@ class SLL:
         temp = self.head
         while temp.next is not None and temp.val is not prevVal:
             temp = temp.next
-        if temp is None:
-            print("Not Present")
-            return
+        
         newNext = temp.next
         temp.next = nn
         nn.next = newNext
@@ -63,14 +64,15 @@ class SLL:
             if temp.val is target:
                 if temp is self.head:
                     self.head = self.head.next
-                prev.next = temp.next
+                else:
+                    prev.next = temp.next
             prev = temp
             temp = temp.next
             
     def deleteFront(self):
         if self.head is None:
             return
-        self.head = self.head.next;
+        self.head = self.head.next
         
     def deleteEnd(self):
         if self.head is None:
@@ -92,16 +94,17 @@ class SLL:
             return
         x = self.head
         while x is not None:
-            y = i.next
+            y = x.next
             while y is not None:
-                if i.val > j.val:
-                    swap(i, j)
-                j = j.next
-            i = i.next
+                if x.val > y.val:
+                    x.val, y.val = y.val, x.val
+                y = y.next
+            x = x.next
     
 if __name__ == '__main__':
-    print('The Single Linked List\n')
+    print('The Single Linked List')
     obj = SLL()
+    
     obj.addEnd(7)
     obj.addEnd(9)
     obj.addEnd(10)
@@ -112,26 +115,30 @@ if __name__ == '__main__':
     obj.addEnd(4)
     obj.printList()
     
-    print("Add 10 after 7\n")
+    print("\nAdd 10 after 7")
     obj.addAfter(10,7)
     obj.printList()
 
-    print("Add 3 after 9\n")
+    print("\nAdd 3 after 9")
     obj.addAfter(3,9)
     obj.printList()
+    
+    print("\nSorted List")
+    obj.sortSLL()
+    obj.printList()
 
-    print("Delete front\n")
+    print("\nDelete front")
     obj.deleteFront()
     obj.printList()
 
-    print("Delete end\n")
+    print("\nDelete end")
     obj.deleteEnd()
     obj.printList()
 
-    print("Delete the first instance of 9\n")
+    print("\nDelete the first instance of 9")
     obj.deleteFirstInstance(9)
     obj.printList()
 
-    print("Delete all instances of 10\n")
+    print("\nDelete all instances of 10")
     obj.deleteAllInstances(10)
     obj.printList()
