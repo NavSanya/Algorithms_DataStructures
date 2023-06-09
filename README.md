@@ -34,7 +34,10 @@ C++ Program -> InsertionSort.cpp
 Java Program -> InsertionSort.java
 Python Program -> InsertionSort.py
 ```
-Merge Sort
+[Merge Sort][4]
+ 
+[4]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/Merge%20Sort
+
 Three files:-
 ```
 C++ Program -> MergeSort.cpp
@@ -42,7 +45,10 @@ Java Program -> MergeSort.java
 Python Program -> MergeSort.py
 ```
 
-Quick Sort
+[Quick Sort][5]
+  
+[5]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/Quick%20Sort
+  
 Three files:-
 ```
 C++ Program -> QuickSort.cpp
@@ -53,37 +59,59 @@ Python Program -> QuickSort.py
 </details>
 <details>
 <summary>2. Solving recurrences</summary>
-<br>
-  + Iteration Method
-  <br>
-  + Master Method
-  <br>
-  + Substitution Method
-  <br>
-  + Recursive Tree Method
- </details>
+
+  ```
+  Iteration Method
+  ```
+
+  ```
+  Master Method
+  ```
+
+  ```
+  Substitution Method
+  ```
+
+  ```
+  Recursive Tree Method
+  ```
+ 
+</details>
  
  <details>
 <summary>3. Heaps</summary>
-<br>
-  + MaxHeaps in C++
-  <br>
-  + MaxHeaps in Java
-  <br>
-  + MaxHeaps in Python
+
+  [MaxHeaps in C++][6]
+  
+  [6]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsC%2B%2B 
+
+  [MaxHeaps in Java][7]
+  
+  [7]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsJava
+  
+  [MaxHeaps in Python][8]
+  
+  [8]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsPython
+  
  </details>
 
 <details>
 <summary>4. Non Comparison Sort</summary>
-<br>
-  Counting Sort
+
+  [Counting Sort][9]
+  
+  [9]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/3_Non-ComparisonSorts/Counting%20Sort
+  
   ```
     * C++
     * Java
     * Python
   ```
-  <br>
-  Radix Sort
+  
+  [Radix Sort][10]
+  
+  [10]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/3_Non-ComparisonSorts/Radix%20Sort
+  
   ```  
     * C++
     * Java
@@ -93,25 +121,39 @@ Python Program -> QuickSort.py
 
 <details>
 <summary>5. Linked List</summary>
-<br>
-  Single Linked List
+
+  [Single Linked List][11]
+  
+  [11]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/5_LinkedList/SIngle%20Linked%20List
+  
   ```  
     * C++
     * Java
     * Python
   ```
-  <br>
+
   Double Linked List
+  
   ```  
     * C++
     * Java
     * Python
   ```
-  <br>
+
   Circular Linked List
+  
   ```
     * C++
     * Java
     * Python
   ```
- </details>
+ 
+</details>
+<details>
+<summary>6. Hash Tables</summary>
+
+  ```
+  stuff
+  ```
+ 
+</details>
