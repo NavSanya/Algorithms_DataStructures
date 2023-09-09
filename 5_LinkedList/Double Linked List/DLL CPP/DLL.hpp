@@ -32,7 +32,7 @@ class DLL
         //print linked List in reverse
         void printRevList();
         //swap values of 2 nodes
-        void swap();
+        void swap(Node*, Node*);
         //add at the end of the list
 	void addEnd(int newVal);
 	//add after the specified value

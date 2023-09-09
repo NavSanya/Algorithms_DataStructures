@@ -1,16 +1,13 @@
-public class Node 
-{
+public class NodeSLL {
     int val;
-    Node next;
+    NodeSLL next;
 
-    Node()
-    {
+    NodeSLL() {
         val = 0;
         next = null;
     }
 
-    Node(int v, Node n)
-    {
+    NodeSLL(int v, NodeSLL n) {
         val = v;
         next = n;
     }
