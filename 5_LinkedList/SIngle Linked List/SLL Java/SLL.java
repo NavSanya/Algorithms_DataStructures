@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.*;
 
 public class SLL {
-    private Node head;
+    private NodeSLL head;
 
     public SLL() {
         head = null;
     }
 
-    public SLL(Node h) {
+    public SLL(NodeSLL h) {
         head = h;
     }
 
@@ -18,7 +18,7 @@ public class SLL {
             return;
         }
 
-        Node temp = head;
+        NodeSLL temp = head;
         while (temp.next != null) {
             System.out.print(temp.val + "--->");
             temp = temp.next;
@@ -26,14 +26,14 @@ public class SLL {
         System.out.println(temp.val);
     }
 
-    public void swap(Node a, Node b) {
+    public void swap(NodeSLL a, NodeSLL b) {
         int temp = a.val;
         a.val = b.val;
         b.val = temp;
     }
 
     public void addEnd(int newVal) {
-        Node nn = new Node(newVal, null);
+        NodeSLL nn = new NodeSLL(newVal, null);
 
         // if there is no list
         if (head == null) {
@@ -42,7 +42,7 @@ public class SLL {
         }
 
         // SLL traversal - add at the end of the list
-        Node temp = head;
+        NodeSLL temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -51,24 +51,24 @@ public class SLL {
     }
 
     public void addAfter(int newVal, int prevVal) {
-        Node nn = new Node(newVal, null);
+        NodeSLL nn = new NodeSLL(newVal, null);
 
         if (head == null)
             return;
 
-        Node temp = head;
+        NodeSLL temp = head;
         while (temp.next != null && temp.val != prevVal) {
             temp = temp.next;
         }
 
-        Node newNext = temp.next;
+        NodeSLL newNext = temp.next;
         temp.next = nn;
         nn.next = newNext;
     }
 
     public void deleteFirstInstance(int target) {
-        Node temp = head;
-        Node prev = null;
+        NodeSLL temp = head;
+        NodeSLL prev = null;
         int retVal;
         if (head == null) {
             return;
@@ -90,8 +90,8 @@ public class SLL {
     }
 
     public void deleteAllInstances(int target) {
-        Node temp = head;
-        Node prev = null;
+        NodeSLL temp = head;
+        NodeSLL prev = null;
 
         if (head == null) {
             return;
@@ -123,8 +123,8 @@ public class SLL {
             return;
         }
 
-        Node temp = head;
-        Node prev = null;
+        NodeSLL temp = head;
+        NodeSLL prev = null;
         while (temp.next != null) {
             prev = temp;
             temp = temp.next;
@@ -137,8 +137,8 @@ public class SLL {
             return;
         }
 
-        Node i = head;
-        Node j;
+        NodeSLL i = head;
+        NodeSLL j;
         while (i != null) {
             j = i.next;
             while (j != null) {
