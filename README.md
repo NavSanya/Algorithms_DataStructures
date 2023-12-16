@@ -1,9 +1,11 @@
 # Algorithms and Datastructures
 <details>
-<summary>1. Comparison Sorts - Ascending order</summary>
+<summary>
+1. Comparison Sorts - Ascending order
+</summary>
 <br>
-  
-[Bubble Sort][1]
+
+### [Bubble Sort][1]
   
 [1]: https://github.com/NavSanya/Algorithms/tree/main/1.%20Comparison%20Sorts/BubbleSort
 Three files:-
@@ -13,7 +15,7 @@ Java Program -> BubbleSort.java
 Python Program -> BubbleSort.py
 ```
 
-[Selection Sort][2]
+### [Selection Sort][2]
   
 [2]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/SelectionSort
   
@@ -24,7 +26,7 @@ Java Program -> SelectionSort.java
 Python Program -> SelectionSort.py
 ```
 
-[Insertion Sort][3]
+### [Insertion Sort][3]
   
 [3]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/InsertionSort
   
@@ -34,7 +36,7 @@ C++ Program -> InsertionSort.cpp
 Java Program -> InsertionSort.java
 Python Program -> InsertionSort.py
 ```
-[Merge Sort][4]
+### [Merge Sort][4]
  
 [4]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/Merge%20Sort
 
@@ -45,7 +47,7 @@ Java Program -> MergeSort.java
 Python Program -> MergeSort.py
 ```
 
-[Quick Sort][5]
+### [Quick Sort][5]
   
 [5]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/1_ComparisonSorts/Quick%20Sort
   
@@ -81,15 +83,15 @@ Python Program -> QuickSort.py
  <details>
 <summary>3. Heaps</summary>
 
-  [MaxHeaps in C++][6]
+  ### [MaxHeaps in C++][6]
   
   [6]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsC%2B%2B 
 
-  [MaxHeaps in Java][7]
+  ### [MaxHeaps in Java][7]
   
   [7]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsJava
   
-  [MaxHeaps in Python][8]
+  ### [MaxHeaps in Python][8]
   
   [8]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/4_Heaps/MaxHeapsPython
   
@@ -98,7 +100,7 @@ Python Program -> QuickSort.py
 <details>
 <summary>4. Non Comparison Sort</summary>
 
-  [Counting Sort][9]
+  ### [Counting Sort][9]
   
   [9]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/3_Non-ComparisonSorts/Counting%20Sort
   
@@ -108,7 +110,7 @@ Python Program -> QuickSort.py
     * Python
   ```
   
-  [Radix Sort][10]
+  ### [Radix Sort][10]
   
   [10]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/3_Non-ComparisonSorts/Radix%20Sort
   
@@ -122,7 +124,7 @@ Python Program -> QuickSort.py
 <details>
 <summary>5. Linked List</summary>
 
-  [Single Linked List][11]
+  ### [Single Linked List][11]
   
   [11]: https://github.com/NavSanya/Algorithms_DataStructures/tree/main/5_LinkedList/SIngle%20Linked%20List
   

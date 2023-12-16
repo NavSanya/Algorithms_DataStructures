@@ -86,8 +86,8 @@ public class DLL {
                 }
 
                 NodeDLL tempEnd = tail;
-                while (tempEnd.next != null && tempEnd.val != nextVal) {
-                        tempEnd = tempEnd.next;
+                while (tempEnd.prev != null && tempEnd.val != nextVal) {
+                        tempEnd = tempEnd.prev;
                 }
 
                 nn.prev = tempEnd.prev;
@@ -147,6 +147,9 @@ public class DLL {
                         return;
                 }
                 tail = tail.prev;
+                if (tail != null) {
+                        tail.next = null;
+                }
         }
 
         public void swap(NodeDLL a, NodeDLL b) {
@@ -205,7 +208,7 @@ class MainDLL {
                 objDll.deleteFront();
                 objDll.printList();
 
-                System.out.println("Delete end");
+                System.out.println("Delete end"); // Not working right
                 objDll.deleteEnd();
                 objDll.printList();
 
@@ -213,11 +216,11 @@ class MainDLL {
                 objDll.deleteFirstInstance(9);
                 objDll.printList();
 
-                System.out.println("Delete all instances of 10");
-                objDll.deleteFirstInstance(10);
+                System.out.println("Delete all instances of 10"); // Not working right
+                objDll.deleteAllInstances(10);
                 objDll.printList();
 
-                System.out.println("Sort List");
+                System.out.println("Sort List"); // Not working right
                 objDll.sortDLL();
                 objDll.printList();
 
